@@ -11,7 +11,7 @@ export class PeliculaService{
         this.data.push({nombre:"El Conjuro 2"
             , duracion:90
             , genero:"Terror"
-            , estreno: "13 de Septiembre del 2016"
+            , estreno: null
             , imagen:""});
         
         this.data.push({nombre:"Pelicula de Accion"

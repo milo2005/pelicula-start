@@ -18,4 +18,8 @@ export class PeliculaListComponent{
         this.peliculas = service.data;
     }
 
+    notificarCompra(valor, pos){
+        alert("Compra realizada pelicula:"+this.peliculas[pos].nombre+" $"+valor);
+    }
+
 }

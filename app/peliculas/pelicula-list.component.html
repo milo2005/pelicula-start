@@ -1,5 +1,8 @@
-<my-appbar [appTitulo]="titulo"></my-appbar>
-
-<div *ngFor="let p of peliculas">
-    <my-pelicula [pelicula]="p"></my-pelicula>
+<div class="main">
+    <my-appbar [appTitulo]="titulo"></my-appbar>
+    <div class="container">
+        <div class="card" *ngFor="let p of peliculas; let i = index">
+            <my-pelicula [pelicula]="p"  (comprar)="notificarCompra($event,i)"></my-pelicula>
+        </div>
+    </div>
 </div>

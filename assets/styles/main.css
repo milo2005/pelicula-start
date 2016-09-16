@@ -16,3 +16,51 @@ html, body{
     color: white;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.6);
 }
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #bbbbbb;
+}
+
+.container{
+    overflow: scroll;
+    padding: 12px;
+    flex: 1;
+}
+
+.card{
+    padding: 8px;
+    margin-bottom: 12px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+    cursor: pointer; 
+    
+}
+
+.card:hover{
+    background: #eeeeee;
+}
+
+.category{
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: 100;
+    color: blue;
+}
+
+.category.terror{
+    color: darkviolet;
+}
+
+.category.comedy{
+    color: orange;
+}
+
+.category.action{
+    color: mediumvioletred;
+}
+
+

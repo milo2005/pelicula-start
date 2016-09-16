@@ -1,4 +1,18 @@
-<h1>{{pelicula.nombre}}</h1>
-<h2>{{pelicula.genero}}</h2>
-<p>Duracion: {{pelicula.duracion}}</p>
-<p>Estreno: {{pelicula.estreno}}</p>
+<div (click)="buyPelicula()">
+    <h1>{{pelicula.nombre}}</h1>
+    <div [ngSwitch]="pelicula.genero">
+        <div *ngSwitchCase="'Terror'">
+            <h2 class="category terror">{{pelicula.genero}}</h2>
+        </div>
+        <div *ngSwitchCase="'Comedia'">
+            <h2 class="category comedy">{{pelicula.genero}}</h2>
+        </div>
+        <div *ngSwitchCase="'Accion'">
+            <h2 class="category action">{{pelicula.genero}}</h2>
+        </div>
+    </div>
+
+    <p>Duracion: {{pelicula.duracion | duracion}}</p>
+    <p *ngIf="pelicula.estreno">Estreno: {{pelicula.estreno}}</p>
+
+</div>
